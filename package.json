@@ -20,5 +20,8 @@
   "homepage": "https://github.com/gaborsoos-byborg/retool-poc#readme",
   "dependencies": {
     "fastify": "^4.28.1"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }
