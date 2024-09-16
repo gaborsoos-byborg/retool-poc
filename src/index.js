@@ -6,9 +6,10 @@ fastify.get('/', function handler (request, reply) {
 });
 
 const port = process.env.PORT || 10000;
+const host = process.env.HOST || 'localhost';
 
 // Run the server!
-fastify.listen({ port }, (err) => {
+fastify.listen({ host, port }, (err) => {
     if (err) {
         fastify.log.error(err)
         process.exit(1)
