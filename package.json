@@ -1,0 +1,24 @@
+{
+  "name": "retool-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaborsoos-byborg/retool-poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaborsoos-byborg/retool-poc/issues"
+  },
+  "homepage": "https://github.com/gaborsoos-byborg/retool-poc#readme",
+  "dependencies": {
+    "fastify": "^4.28.1"
+  }
+}
