@@ -16,7 +16,7 @@ fastify.post('/videos', function handler (request, reply) {
     id: videos.length,
     name: request.body.name || 'undefined',
     payload: JSON.stringify(request.body),
-    headers: JSON.stringify(request.headers)
+    headers: JSON.stringify({ userId: request.headers['x-user-id'] })
   };
   videos.push(video);
 
