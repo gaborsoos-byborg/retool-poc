@@ -1,6 +1,6 @@
 const fastify = require('fastify')({ logger: true });
 
-const videos = [{ id: 0, name: 'Dummy Video', payload: '{}' }];
+const videos = [{ id: 0, name: 'Dummy Video', payload: '{}', headers: '{}' }];
 
 // Declare a route
 fastify.get('/', function handler (request, reply) {
@@ -12,7 +12,12 @@ fastify.get('/videos', function handler (request, reply) {
 });
 
 fastify.post('/videos', function handler (request, reply) {
-  const video = { id: videos.length, name: request.body.name || 'undefined', payload: JSON.stringify(request.body) };
+  const video = {
+    id: videos.length,
+    name: request.body.name || 'undefined',
+    payload: JSON.stringify(request.body),
+    headers: JSON.stringify(request.headers)
+  };
   videos.push(video);
 
   reply.send(video);
